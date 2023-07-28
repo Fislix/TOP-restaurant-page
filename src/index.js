@@ -1,2 +1,2 @@
-import load from './fist-load.js';
+import load from './first-load.js';
 load();
