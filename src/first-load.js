@@ -15,6 +15,7 @@ function addHeader() {
 function addMainContent() {
   addDescription();
   addMenu();
+  addContact();
 }
 
 function addDescription() {
@@ -45,4 +46,21 @@ function generateItemsList() {
     list.appendChild(menuItem);
   }
   return list;
+}
+
+function addContact() {
+  let contactSection = document.createElement('section');
+  let heading = document.createElement('h2');
+  heading.innerText = 'Contact';
+  contactSection.appendChild(heading);
+
+  let phoneNumber = document.createElement('p');
+  phoneNumber.innerText = 'Phone: +49 314 1592653';
+  let address = document.createElement('p');
+  address.innerText = 'Address: Fischerstraße 69, 77977 Rust, Germany';
+  
+  contactSection.appendChild(phoneNumber);
+  contactSection.appendChild(address);
+
+  document.body.appendChild(contactSection);
 }
