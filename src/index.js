@@ -3,44 +3,9 @@ import { generateMenuPage } from './subpages/menu-page.js';
 import { generateContactPage } from './subpages/contact-page.js';
 
 let aboutPage = generateAboutPage();
-let menuPage = generateMenuPage();
-let contactPage = generateContactPage();
 
-let body = document.body;
-let header = document.createElement('header');
-
-let restaurantName = document.createElement('h1');
-restaurantName.innerText = 'Coder\'s Café';
-header.appendChild(restaurantName);
-
-let navigation = document.createElement('nav');
-function addNavigationButtons() {
-  let about = document.createElement('span');
-  about.innerText = 'About';
-  let menu = document.createElement('span');
-  menu.innerText = 'Menu';
-  let contact = document.createElement('span');
-  contact.innerText = 'Contact';
-
-  about.addEventListener('click', () => {
-    switchToPage(aboutPage);
-  });
-  menu.addEventListener('click', () => {
-    switchToPage(menuPage);
-  });
-  contact.addEventListener('click', () => {
-    switchToPage(contactPage);
-  });
-
-  navigation.appendChild(about);
-  navigation.appendChild(menu);
-  navigation.appendChild(contact);
-};
-addNavigationButtons();
-header.appendChild(navigation);
-
-
-body.appendChild(header);
+document.body.appendChild(getHeader());
+document.body.appendChild(aboutPage);
 
 let currentPage = aboutPage;
 function switchToPage(page) {
@@ -49,5 +14,37 @@ function switchToPage(page) {
   currentPage = page;
 }
 
-document.body.appendChild(aboutPage);
+function getHeader() {
+  let header = document.createElement('header');
+  header.appendChild(getRestaurantName());
+  header.appendChild(getNavigationBar());
+  return header;
+}
+
+function getRestaurantName() {
+  let restaurantName = document.createElement('h1');
+  restaurantName.innerText = 'Coder\'s Café';
+  return restaurantName;
+}
+
+function getNavigationBar() {
+  let navBar = document.createElement('nav');
+  let subpages = [
+    { name: 'About', node: generateAboutPage() },
+    { name: 'Menu', node: generateMenuPage() },
+    { name: 'Contact', node: generateContactPage() },
+  ];
+  for (const page of subpages) {
+    navBar.appendChild(createNavItem(page.name, page.node));
+  }
+
+  return navBar;
+}
+
+function createNavItem(name, node) {
+  let navItem = document.createElement('span');
+  navItem.innerText = name;
+  navItem.addEventListener('click', () => switchToPage(node));
+  return navItem;
+}
 
