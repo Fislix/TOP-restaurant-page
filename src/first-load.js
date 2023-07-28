@@ -13,28 +13,30 @@ function addHeader() {
 }
 
 function addMainContent() {
-  addDescription();
-  addMenu();
-  addContact();
+  let main = document.createElement('main');
+  addAbout(main);
+  addMenu(main);
+  addContact(main);
+  document.body.appendChild(main);
 }
 
-function addDescription() {
-  let main = document.createElement('main');
+function addAbout(parent) {
+  let aboutSection = document.createElement('section');
   let description = document.createElement('p');
   description.innerText = 'Welcome to Coder\'s Café! Every coder will find ' +
     'something to enjoy here, no matter how bad their taste in programming ' + 
     'languages is!';
-  main.appendChild(description);
-  document.body.appendChild(main);
+  aboutSection.appendChild(description)
+  parent.appendChild(aboutSection);
 }
 
-function addMenu() {
+function addMenu(parent) {
   let menuSection = document.createElement('section');
   let heading = document.createElement('h2');
   heading.innerText = 'Menu';
   menuSection.appendChild(heading);
   menuSection.appendChild(generateItemsList());
-  document.body.appendChild(menuSection);
+  parent.appendChild(menuSection);
 }
 
 function generateItemsList() {
@@ -48,7 +50,7 @@ function generateItemsList() {
   return list;
 }
 
-function addContact() {
+function addContact(parent) {
   let contactSection = document.createElement('section');
   let heading = document.createElement('h2');
   heading.innerText = 'Contact';
@@ -62,5 +64,5 @@ function addContact() {
   contactSection.appendChild(phoneNumber);
   contactSection.appendChild(address);
 
-  document.body.appendChild(contactSection);
+  parent.appendChild(contactSection);
 }
