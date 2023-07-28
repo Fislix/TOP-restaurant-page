@@ -5,7 +5,9 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    firstLoad: './src/first-load.js',
+    about: './src/subpages/about-page.js',
+    menu: './src/subpages/menu-page.js',
+    contact: './src/subpages/contact-page.js',
   },
   devtool: 'inline-source-map',
   devServer: {
