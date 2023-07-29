@@ -1,5 +1,6 @@
 import CallIcon from '../../images/icons/call.png';
 import LocationIcon from '../../images/icons/location.png';
+import MailIcon from '../../images/icons/mail.png';
 
 export function generateContactPage() {
   let contactPage = document.createElement('main');
@@ -13,7 +14,11 @@ export function generateContactPage() {
     LocationIcon,
     'Fischerstraße 69, 77977 Rust, Germany'
   ));
-  
+  contactPage.appendChild(createIconTextPair(
+    MailIcon,
+    'mr.wasgehtsiedasan@ccafe.com'
+  ));
+
   return contactPage;
 }
 
