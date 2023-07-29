@@ -4,6 +4,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+header {
+  text-align: center;
+}
+
 h1 {
   font-family: 'Chakra Petch', sans-serif;
 }
