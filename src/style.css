@@ -9,6 +9,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  color: var(--textPrimary);
+  background-color: var(--primary);
 }
 
 header {
