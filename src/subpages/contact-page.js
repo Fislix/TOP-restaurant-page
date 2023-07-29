@@ -5,21 +5,29 @@ import MailIcon from '../../images/icons/mail.png';
 export function generateContactPage() {
   let contactPage = document.createElement('main');
   contactPage.id = 'contact-page';
+
+  addHeading(contactPage);
+  addContactInformation(contactPage);
+
+  return contactPage;
+}
+
+function addHeading(parent) {
   let heading = document.createElement('h2');
   heading.innerText = 'Contact';
-  contactPage.appendChild(heading);
+  parent.appendChild(heading);
+}
 
-  contactPage.appendChild(createIconTextPair(CallIcon, '+49 314 1592653'));
-  contactPage.appendChild(createIconTextPair(
+function addContactInformation(parent) {
+  parent.appendChild(createIconTextPair(CallIcon, '+49 314 1592653'));
+  parent.appendChild(createIconTextPair(
     LocationIcon,
     'Fischerstraße 69, 77977 Rust, Germany'
   ));
-  contactPage.appendChild(createIconTextPair(
+  parent.appendChild(createIconTextPair(
     MailIcon,
     'mr.wasgehtsiedasan@ccafe.com'
   ));
-
-  return contactPage;
 }
 
 function createIconTextPair(icon, text) {
