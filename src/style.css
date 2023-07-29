@@ -79,6 +79,7 @@ main {
 
 #restaurant-photos {
   display: flex;  
+  padding-top: 2rem;
 }
 
 #restaurant-photos > img {
