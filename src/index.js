@@ -1,6 +1,7 @@
 import { generateAboutPage } from './subpages/about-page.js';
 import { generateMenuPage } from './subpages/menu-page.js';
 import { generateContactPage } from './subpages/contact-page.js';
+import './style.css';
 
 let aboutPage = generateAboutPage();
 
