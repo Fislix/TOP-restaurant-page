@@ -26,7 +26,7 @@ function addContactInformation(parent) {
   ));
   parent.appendChild(createIconTextPair(
     MailIcon,
-    'mr.wasgehtsiedasan@ccafe.com'
+    'mr.wasgehtsiedasan@coderscafe.com'
   ));
 }
 
