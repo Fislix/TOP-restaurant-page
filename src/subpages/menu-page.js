@@ -16,7 +16,7 @@ const menuItems = [
   },
   {
     name: 'Snake Meat Stew',
-    price: '14.99',
+    price: '$14.99',
     photo: MeatStewPhoto,
   },
   {
