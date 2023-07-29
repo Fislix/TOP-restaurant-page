@@ -43,14 +43,31 @@ function addHeading(parent) {
 }
 
 function addItemsList(parent) {
-  let menuItems = ['Java Beans Coffee', 'Crab Plate', 'Snake Meat Stew', 'C-food'];
-  let list = document.createElement('ul');
-  for (const itemName of menuItems) {
-    let menuItem = document.createElement('li');
-    menuItem.innerText = itemName;
-    list.appendChild(menuItem);
-  }
+  for (const item of menuItems) {
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('menu-item');
 
-  parent.appendChild(list);
+    let image = new Image();
+    image.src = item.photo;
+    wrapper.appendChild(image);
+    
+    let description = getItemDescription(item.name, item.price);
+    wrapper.appendChild(description);
+
+    parent.appendChild(wrapper);
+  }
 }
 
+function getItemDescription(name, price) {
+  let textWrapper = document.createElement('div');
+
+  let nameElement = document.createElement('span');
+  nameElement.innerText = name;
+  textWrapper.appendChild(nameElement);
+
+  let priceElement = document.createElement('span')
+  priceElement.innerText = price;
+  textWrapper.appendChild(priceElement);
+
+  return textWrapper;
+}

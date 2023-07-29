@@ -89,6 +89,34 @@ main {
   border-radius: 15px;
 }
 
+.menu-item {
+  display: flex;
+  height: 10rem;
+  margin: 2rem 0;
+  padding-left: 10%;
+}
+
+.menu-item > img {
+  border: 3px solid var(--secondary);
+  border-radius: 15px;
+}
+
+.menu-item > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem 0 1rem 1.5rem;
+}
+
+.menu-item > div > span:first-child {
+  font-size: 1.5em;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.menu-item > div > span:last-child {
+  font-size: 1.3em;
+}
+
 #contact-page > div {
   display: flex;
   align-items: center;
