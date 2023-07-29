@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Montserrat&display=swap');
 
+:root {
+  --primary: #CE5959;
+  --secondary:  #89375F;
+  --textPrimary: #F3E8FF;
+  --textSecondary: #BACDDB;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
 }
