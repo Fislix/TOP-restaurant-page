@@ -40,14 +40,14 @@ h1 {
 #main-grid {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: 15% auto 15%;
   background-color: var(--secondary);
   flex-grow: 1;
 }
 
 main {
   grid-column: 2 / 3;
-  padding-top: 5%;
+  padding: 5% 5% 0 5%;
   background-color: var(--primary);
   box-shadow: 0 0 12px black;
   clip-path: inset(0px -15px 0px -15px);
