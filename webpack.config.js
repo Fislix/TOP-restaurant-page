@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     header: './src/header.js',
+    navbar: './src/navbar.js',
     about: './src/subpages/about-page.js',
     menu: './src/subpages/menu-page.js',
     contact: './src/subpages/contact-page.js',
