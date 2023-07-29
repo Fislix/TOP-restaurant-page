@@ -3,13 +3,13 @@
 :root {
   --primary: #CE5959;
   --secondary:  #89375F;
-  --textPrimary: #F3E8FF;
-  --textSecondary: #BACDDB;
+  --accentPrimary: #F3E8FF;
+  --accentSecondary: #BACDDB;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--textPrimary);
+  color: var(--accentPrimary);
   background-color: var(--primary);
 }
 
