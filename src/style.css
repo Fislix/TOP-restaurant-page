@@ -12,10 +12,12 @@ nav {
   display: flex;
   justify-content: space-evenly;
   padding: 0 20%;
+  font-size: 1.5rem;
 }
 
 h1 {
   font-family: 'Chakra Petch', sans-serif;
+  font-size: 3rem;
 }
 
 main {
