@@ -7,10 +7,15 @@
   --secondaryDark: #BACDDB;
 }
 
-body {
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
   color: var(--secondary);
   background-color: var(--primary);
+  margin: 0;
 }
 
 header {
@@ -29,8 +34,18 @@ h1 {
   font-size: 3rem;
 }
 
+#main-grid {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 20% auto 20%;
+  background-color: var(--secondary);
+  flex-grow: 1;
+}
+
 main {
-  padding: 5% 20% 0 20%;
+  grid-column: 2 / 3;
+  padding-top: 5%;
+  background-color: var(--primary);
 }
 
 #restaurant-photos {
