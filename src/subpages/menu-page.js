@@ -1,5 +1,6 @@
 export function generateMenuPage() {
   let menuPage = document.createElement('main');
+  menuPage.id = 'menu-page';
   let heading = document.createElement('h2');
   heading.innerText = 'Menu';
   menuPage.appendChild(heading);

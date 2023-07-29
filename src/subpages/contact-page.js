@@ -1,5 +1,6 @@
 export function generateContactPage() {
   let contactPage = document.createElement('main');
+  contactPage.id = 'contact-page';
   let heading = document.createElement('h2');
   heading.innerText = 'Contact';
   contactPage.appendChild(heading);
