@@ -56,6 +56,11 @@ nav > span:last-child {
   border-top-right-radius: 10px;
 }
 
+nav > span:hover {
+  color: var(--primaryDark);
+  background-color: var(--secondary);
+}
+
 #main-grid {
   display: grid;
   box-sizing: border-box;
