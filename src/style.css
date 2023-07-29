@@ -28,8 +28,26 @@ header {
 nav {
   display: flex;
   justify-content: space-evenly;
-  padding: 0 20%;
+  padding: 0 15%;
   font-size: 1.5rem;
+  border-bottom: 2px solid var(--secondaryDark);
+}
+
+nav > span {
+  display: inline-block;
+  width: 100%;
+  padding: 0.2em 0;
+  border: 2px solid var(--secondaryDark);
+  border-bottom: none;
+  background-color: var(--primaryDark);
+}
+
+nav > span:first-child {
+  border-top-left-radius: 10px;
+}
+
+nav > span:last-child {
+  border-top-right-radius: 10px;
 }
 
 h1 {
